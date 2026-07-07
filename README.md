@@ -30,6 +30,5 @@ npm run dev
 - Desktop
 - Tablet
 - Mobile
-=======
-# Frontend-development
+
 
