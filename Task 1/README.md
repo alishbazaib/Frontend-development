@@ -1,24 +1,28 @@
-Admin Dashboard
+# Admin Dashboard
 
-A responsive Admin Dashboard developed using React. The project demonstrates component-based development, client-side routing, responsive design principles, and a clean dashboard interface.
+A responsive Admin Dashboard built using React. The project demonstrates responsive design, component-based architecture, and client-side routing.
 
-Features
-Responsive dashboard layout
-Persistent collapsible sidebar
-Reusable top header
-Overview page
-Inventory page
-Settings page
-Client-side routing with React Router DOM
-Desktop, tablet, and mobile support
+## Features
 
-Technologies Used
-React
-React Router DOM
-CSS3
-Vite
+- Responsive dashboard layout
+- Persistent collapsible sidebar
+- Top header
+- Overview page
+- Inventory page
+- Settings page
+- React Router DOM routing
+- Desktop, tablet, and mobile support
 
-Project Structure
+## Technologies Used
+
+- React
+- React Router DOM
+- CSS3
+- Vite
+
+## Project Structure
+
+```text
 src/
 ├── components/
 │   ├── Header.jsx
@@ -33,27 +37,47 @@ src/
 ├── App.css
 ├── index.css
 └── main.jsx
+```
 
-Setup Instructions
-1. Clone the Repository
+## Setup Instructions
+
+### Clone the Repository
+
+```bash
 git clone <repository-url>
-2. Navigate to the Project Directory
+```
+
+### Navigate to the Project Directory
+
+```bash
 cd admin-dashboard
-3. Install Dependencies
+```
+
+### Install Dependencies
+
+```bash
 npm install
-4. Start the Development Server
+```
+
+### Run the Development Server
+
+```bash
 npm run dev
-5. Open in Browser
+```
 
-Visit:
+### Open in Browser
 
+```text
 http://localhost:5173
-Responsive Design
+```
 
-The dashboard is designed to provide a consistent user experience across:
+## Responsive Design
 
-Desktop Devices
-Tablet Devices
-Mobile Devices
+The dashboard is optimized for:
+
+- Desktop Devices
+- Tablet Devices
+- Mobile Devices
+
 
 
