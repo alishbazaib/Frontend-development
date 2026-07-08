@@ -1,34 +1,59 @@
+Admin Dashboard
 
-# Admin Dashboard
+A responsive Admin Dashboard developed using React. The project demonstrates component-based development, client-side routing, responsive design principles, and a clean dashboard interface.
 
-A responsive React admin dashboard built for the Frontend Internship.
+Features
+Responsive dashboard layout
+Persistent collapsible sidebar
+Reusable top header
+Overview page
+Inventory page
+Settings page
+Client-side routing with React Router DOM
+Desktop, tablet, and mobile support
 
-## Features
+Technologies Used
+React
+React Router DOM
+CSS3
+Vite
 
-- Responsive layout
-- Collapsible sidebar
-- Top header
-- Overview page
-- Inventory page
-- Settings page
+Project Structure
+src/
+├── components/
+│   ├── Header.jsx
+│   └── Sidebar.jsx
+│
+├── pages/
+│   ├── Overview.jsx
+│   ├── Inventory.jsx
+│   └── Settings.jsx
+│
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx
 
-## Installation
-
+Setup Instructions
+1. Clone the Repository
+git clone <repository-url>
+2. Navigate to the Project Directory
+cd admin-dashboard
+3. Install Dependencies
 npm install
-
+4. Start the Development Server
 npm run dev
+5. Open in Browser
 
-## Technologies Used
+Visit:
 
-- React
-- React Router DOM
-- CSS
-- Vite
+http://localhost:5173
+Responsive Design
 
-## Responsive Design
+The dashboard is designed to provide a consistent user experience across:
 
-- Desktop
-- Tablet
-- Mobile
+Desktop Devices
+Tablet Devices
+Mobile Devices
 
 
