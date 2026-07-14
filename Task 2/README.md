@@ -13,12 +13,10 @@ This task is a responsive and professional data-entry form built with **React**,
 - React Hook Form for form state management
 - Real-time client-side validation
 - Friendly field-level error messages
-- Disabled submit button when form is invalid
 - Success confirmation after valid submission
 - Accessible form controls and validation feedback
-- Profile picture upload
 - Form submission is prevented until all validation rules are satisfied.
-- A success confirmation popup is displayed after successful form submission.
+  
 ---
 
 ## Form Fields
