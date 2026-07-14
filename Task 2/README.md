@@ -1,4 +1,4 @@
-#Advanced Form Handling & Validation
+## Advanced Form Handling & Validation
 
 ## Overview
 
@@ -49,7 +49,7 @@ This task is a responsive and professional data-entry form built with **React**,
 | Gender | Required |
 | Joining Date | Required |
 | Address | Required, minimum 10 characters |
-
+| Picture | Required |
 
 ## State Management
 
