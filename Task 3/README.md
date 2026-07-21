@@ -1,75 +1,185 @@
-# React + TypeScript + Vite
+# API Integration & Interactive Data Table
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+This project is a React and TypeScript-based web application that demonstrates API integration and interactive data presentation using a dynamic data table. The application fetches user records from a public API and provides features such as searching, sorting, pagination, loading states, error handling, and empty-state management.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The project was developed to showcase asynchronous data fetching, data transformation, state management, and table usability using modern frontend development practices.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+### Data Fetching
+- Fetches user data from a public API.
+- Displays records in a structured table.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Search Functionality
+- Search users by first name or last name.
+- Real-time filtering without additional API requests.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Sorting
+- Sortable columns:
+  - ID
+  - First Name
+  - Last Name
+  - Email
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Pagination
+- Previous and Next page navigation.
+- Displays current page information.
+- Shows 5 records per page.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Loading State
+- Displays loading skeletons while data is being fetched.
 
+### Error Handling
+- Displays a user-friendly error message if the API request fails.
+
+### Empty State
+- Displays a "No records found" message when no matching records are available.
+
+### Performance Optimization
+- `useMemo` for optimized filtering and column definitions.
+- `React.memo` to prevent unnecessary component re-renders.
+- React Query caching for efficient data fetching.
+
+---
+
+## Technology Stack
+
+### Frontend
+- React
+- TypeScript
+- Vite
+
+### API & State Management
+- Axios
+- TanStack Query (React Query)
+
+### Data Table
+- TanStack Table
+
+### Styling
+- CSS
+
+---
+
+## API Details
+
+### Endpoint
+
+```text
+https://dummyjson.com/users
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Data Used
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- User ID
+- First Name
+- Last Name
+- Email Address
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Purpose
 
+The API is used to demonstrate:
+
+- Asynchronous data fetching
+- Data transformation
+- Filtering
+- Sorting
+- Pagination
+- State management
+
+---
+
+## Project Structure
+
+```text
+src
+├── api
+│   └── usersApi.ts
+├── hooks
+│   └── useUsers.ts
+├── components
+│   ├── DataTable.tsx
+│   ├── LoadingSkeleton.tsx
+│   └── ErrorState.tsx
+├── App.tsx
+├── main.tsx
+└── index.css
+```
+
+---
+
+## Component Notes
+
+### App.tsx
+
+Main application component responsible for:
+
+- Managing search functionality
+- Rendering loading, error, and empty states
+- Passing filtered data to the table component
+
+### DataTable.tsx
+
+Handles:
+
+- Data rendering
+- Column sorting
+- Pagination controls
+
+### useUsers.ts
+
+Custom React Query hook responsible for:
+
+- Fetching user data
+- Managing loading and error states
+- Caching API responses
+
+### usersApi.ts
+
+Handles API communication using Axios.
+
+### LoadingSkeleton.tsx
+
+Displays loading placeholders while data is being retrieved.
+
+### ErrorState.tsx
+
+Displays user-friendly error messages when API requests fail.
+
+---
+
+## Installation & Setup
+
+### Clone the Repository
+
+```bash
+git clone <repository-url>
+```
+
+### Navigate to the Project
+
+```bash
+cd api-data-table
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Start Development Server
+
+```bash
+npm run dev
+```
+
+### Build for Production
+
+```bash
+npm run build
 ```
